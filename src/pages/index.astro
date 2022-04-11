@@ -1,11 +1,11 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import Poster from '@/components/Poster.vue'
-import VerdsLogo from '@/images/logo-verds.svg'
-import EuropeanGreensLogo from '@/images/logo-eg.svg'
+import AppNav from '@/components/AppNav.vue'
+import ConferenceInfo from '@/components/ConferenceInfo.vue'
 ---
 <Layout>
-	<img src={VerdsLogo} alt="Verds-Equo">
-	<img src={EuropeanGreensLogo} alt="European Greens">
-	<Poster />
+	<AppNav />
+	<Poster client:visible />
+	<ConferenceInfo client:visible />
 </Layout>
