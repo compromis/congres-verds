@@ -4,7 +4,7 @@
       <img src="@/images/logo-verds.svg" alt="Verds-Equo">
     </a>
     <a href="https://compromis.net" target="_blank" class="logo-compromis">
-      <CompromisLogo mono />
+      <CompromisLogo collapse-at="sm" mono />
     </a>
     <a href="https://europeangreens.eu/" target="_blank" class="logo-eg">
       <img src="@/images/logo-eg.svg" alt="European Greens">
@@ -46,6 +46,30 @@ import CompromisLogo from '@compromis/blobby/components/logos/CompromisLogo.vue'
       height: 3rem;
       margin-left: 1rem;
     }
+  }
+}
+
+@media (max-width: 1000px) {
+  .nav {
+    background: var(--green);
+
+    .logo-verds img {
+      height: 1.5rem;
+    }
+
+    .logo-compromis :deep(svg) {
+      height: 1.25rem;
+    }
+
+    .logo-eg img {
+      height: 1.75rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .nav .logo-compromis :deep(.logo-wrapper) {
+    max-width: 1.375rem;
   }
 }
 </style>

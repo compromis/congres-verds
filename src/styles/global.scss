@@ -1,3 +1,14 @@
 @import "variables";
 @import "fonts";
 @import "@compromis/blobby/scss/blobby";
+
+:root {
+  --pine: #{$pine};
+  --font-headings: #{$font-family-headings};
+  --breakpoint-md: 1000px;
+  --breakpoint-sm: 800px;
+}
+
+body {
+  padding-top: 4rem;
+}
