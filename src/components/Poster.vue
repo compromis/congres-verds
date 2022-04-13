@@ -147,7 +147,7 @@ onMounted(() => {
   @media (max-width: 1100px) {
     .poster {
       min-height: auto;
-      padding: 3rem 0;
+      padding: 2rem 0;
 
       .nav-item {
         &.candidates a {

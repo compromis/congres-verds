@@ -18,7 +18,7 @@ import CompromisLogo from '@compromis/blobby/components/logos/CompromisLogo.vue'
 
 <style lang="scss" scoped>
 .nav {
-  position: fixed;
+  position: absolute;
   display: flex;
   padding: 1rem;
   align-items: center;
