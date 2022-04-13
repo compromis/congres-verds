@@ -42,6 +42,7 @@ defineProps({
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+  gap: .5rem;
 
   h2 {
     color: var(--green);
@@ -65,6 +66,8 @@ defineProps({
     border-radius: 100%;
     line-height: 1;
     margin-top: -.5em;
+    color: var(--black);
+    flex-shrink: 0;
 
     svg {
       height: 1em;
@@ -84,11 +87,15 @@ defineProps({
 
 @media (max-width: 750px) {
   .page-modal {
+    position: fixed;
     top: auto;
-    bottom: 5rem;
+    bottom: 2rem;
     left: 1rem;
     right: 1rem;
-    width: 100%;
+    width: auto;
+    max-height: 80vh;
+    overflow: auto;
+    z-index: 100000;
   }
 }
 </style>

@@ -58,7 +58,15 @@ const closePage = () => {
 .backdrop {
   position: fixed;
   inset: 0;
-  z-index: 90;
+  z-index: 10000;
   background: rgba(0, 0, 0, .5);
+}
+
+@media (max-width: 750px) {
+  .page-enter-from,
+  .page-leave-to {
+    opacity: 0;
+    transform: translateY(100%) scale(.5) rotate(25deg);
+  }
 }
 </style>
