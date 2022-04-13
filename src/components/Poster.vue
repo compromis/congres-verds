@@ -2,6 +2,11 @@
 import { onMounted } from 'vue'
 import PosterPages from './PosterPages.vue'
 import Parallax from 'parallax-js'
+import LayerDetails from '@/images/layer-details.png'
+import LayerFlower from '@/images/layer-flower.png'
+import LayerPhotosTop from '@/images/layer-photos-top.png'
+import LayerPhotosBottom from '@/images/layer-photos-bottom.png'
+import LayerText from '@/images/layer-text.png'
 
 onMounted(() => {
   const scene = document.getElementById('scene')
@@ -12,11 +17,11 @@ onMounted(() => {
 <template>
   <section class="poster">
       <div id="scene" class="scene">
-        <img src="../images/layer-details.png" data-depth="0.2" alt="" class="layer layer-details" />
-        <img src="../images/layer-flower.png" data-depth="0.3" alt="" class="layer layer-flower" />
-        <img src="../images/layer-photos-top.png" data-depth="0.4" alt="" class="layer layer-photos-top" />
-        <img src="../images/layer-photos-bottom.png" data-depth="0.5" alt="" class="layer layer-photos-bottom" />
-        <img src="../images/layer-text.png" data-depth="0.6" alt="L'hora de les i els Verds" class="layer layer-text" />
+        <img :src="LayerDetails" data-depth="0.2" alt="" class="layer layer-details" />
+        <img :src="LayerFlower" data-depth="0.3" alt="" class="layer layer-flower" />
+        <img :src="LayerPhotosTop" data-depth="0.4" alt="" class="layer layer-photos-top" />
+        <img :src="LayerPhotosBottom" data-depth="0.5" alt="" class="layer layer-photos-bottom" />
+        <img :src="LayerText" data-depth="0.6" alt="L'hora de les i els Verds" class="layer layer-text" />
 
         <div class="nav-item floats candidates d-none d-md-block" data-depth="0.3">
           <a href="#candidatures">Candidatures</a>
