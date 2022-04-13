@@ -21,6 +21,8 @@ defineProps({
     required: true,
   }
 })
+
+defineEmits(['close'])
 </script>
 
 <style lang="scss">

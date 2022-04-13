@@ -1,46 +1,36 @@
 <script setup>
-import { ref, onMounted } from 'vue'
 import PageModal from './PageModal.vue'
 import PageCandidatures from './PageCandidatures.vue'
 import PageDocuments from './PageDocuments.vue'
 import PageInfo from './PageInfo.vue'
 
-const page = ref(null)
-
-onMounted(() => {
-  page.value = window.location.hash
+defineProps({
+  page: {
+    type: String
+  }
 })
 
-if (typeof window !== "undefined") {
-  window.onhashchange = () => {
-    page.value = window.location.hash
-  }
-}
-
-const closePage = () => {
-  page.value = null
-  history.replaceState(undefined, undefined, " ")
-}
+defineEmits(['close'])
 </script>
 
 <template>
   <div class="pages">
     <transition name="page">
-      <PageModal id="candidatures" title="Candidatures" v-if="page === '#candidatures'" @close="closePage">
+      <PageModal id="candidatures" title="Candidatures" v-if="page === '#candidatures'" @close="$emit('close')">
         <PageCandidatures />
       </PageModal>
     </transition>
     <transition name="page">
-      <PageModal id="documents" title="Documents" v-if="page === '#documents'" @close="closePage">
+      <PageModal id="documents" title="Documents" v-if="page === '#documents'" @close="$emit('close')">
         <PageDocuments />
       </PageModal>
     </transition>
     <transition name="page">
-      <PageModal id="info" title="III Congrés dels Verds" v-if="page === '#info'" @close="closePage">
+      <PageModal id="info" title="III Congrés dels Verds" v-if="page === '#info'" @close="$emit('close')">
         <PageInfo />
       </PageModal>
     </transition>
-    <div class="backdrop d-md-none" @click="closePage" v-if="page"></div>
+    <div class="backdrop d-md-none" @click="$emit('close')" v-if="page"></div>
   </div>
 </template>
 

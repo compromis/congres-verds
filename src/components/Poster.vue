@@ -1,7 +1,7 @@
 <script setup>
-import { onMounted } from 'vue'
-import PosterPages from './PosterPages.vue'
+import { ref, onMounted } from 'vue'
 import Parallax from 'parallax-js'
+import PosterPages from './PosterPages.vue'
 import LayerDetails from '@/images/layer-details.png'
 import LayerFlower from '@/images/layer-flower.png'
 import LayerPhotosTop from '@/images/layer-photos-top.png'
@@ -11,7 +11,26 @@ import LayerText from '@/images/layer-text.png'
 onMounted(() => {
   const scene = document.getElementById('scene')
   const parallaxInstance = new Parallax(scene)
+  page.value = window.location.hash
 })
+
+const page = ref(null)
+
+const setPage = (value) => {
+  page.value = '#' + value
+  history.pushState({}, '', '#' + value)
+}
+
+if (typeof window !== "undefined") {
+  window.onhashchange = () => {
+    page.value = window.location.hash
+  }
+}
+
+const closePage = () => {
+  page.value = null
+  history.replaceState(undefined, undefined, " ")
+}
 </script>
 
 <template>
@@ -24,27 +43,27 @@ onMounted(() => {
         <img :src="LayerText" data-depth="0.6" alt="L'hora de les i els Verds" class="layer layer-text" />
 
         <div class="nav-item floats candidates d-none d-md-block" data-depth="0.3">
-          <a href="#candidatures">Candidatures</a>
+          <a href="#candidatures" @click.prevent="setPage('candidatures')">Candidatures</a>
         </div>
         <div class="nav-item floats documents d-none d-md-block" data-depth="0.4">
-          <a href="#documents">Documents</a>
+          <a href="#documents" @click.prevent="setPage('documents')">Documents</a>
         </div>
         <div class="nav-item floats info d-none d-md-block" data-depth="0.6" style="z-index: 10000">
-          <a href="#info">Informació</a>
+          <a href="#info" @click.prevent="setPage('info')">Informació</a>
         </div>
       </div>
       <div class="mobile-nav-items d-md-none">
         <div class="nav-item candidates">
-          <a href="#candidatures">Candidatures</a>
+          <a href="#candidatures" @click.prevent="setPage('candidatures')">Candidatures</a>
         </div>
         <div class="nav-item documents">
-          <a href="#documents">Documents</a>
+          <a href="#documents" @click.prevent="setPage('documents')">Documents</a>
         </div>
         <div class="nav-item info">
-          <a href="#info">Informació</a>
+          <a href="#info" @click.prevent="setPage('info')">Informació</a>
         </div>
       </div>
-      <PosterPages />
+      <PosterPages :page="page" @close="closePage" />
   </section>
 </template>
 
@@ -147,13 +166,19 @@ onMounted(() => {
   @media (max-width: 1100px) {
     .poster {
       min-height: auto;
-      padding: 2rem 0;
 
       .nav-item {
         &.candidates a {
           left: 0;
         }
       }
+    }
+  }
+
+  @media (min-width: 750px) {
+    .scene .layer {
+      max-height: calc(100vh - 14rem);
+      object-fit: contain;
     }
   }
 </style>
