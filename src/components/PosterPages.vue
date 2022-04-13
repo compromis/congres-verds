@@ -26,17 +26,17 @@ const closePage = () => {
 <template>
   <div class="pages">
     <transition name="page">
-      <PageModal title="Candidatures" v-if="page === '#candidatures'" @close="closePage">
+      <PageModal id="candidatures" title="Candidatures" v-if="page === '#candidatures'" @close="closePage">
         <PageCandidatures />
       </PageModal>
     </transition>
     <transition name="page">
-      <PageModal title="Documents" v-if="page === '#documents'" @close="closePage">
+      <PageModal id="documents" title="Documents" v-if="page === '#documents'" @close="closePage">
         <PageDocuments />
       </PageModal>
     </transition>
     <transition name="page">
-      <PageModal title="III Congrés dels Verds" v-if="page === '#info'" @close="closePage">
+      <PageModal id="info" title="III Congrés dels Verds" v-if="page === '#info'" @close="closePage">
         <PageInfo />
       </PageModal>
     </transition>

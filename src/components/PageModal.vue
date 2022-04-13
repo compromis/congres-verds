@@ -32,10 +32,12 @@ defineProps({
   color: var(--black);
   width: 100%;
   max-width: 500px;
+  max-height: calc(100vh - 13rem);
   padding: 2rem;
   border-radius: 1.5rem;
   box-shadow: var(--shadow-default);
   z-index: 100;
+  overflow-y: auto;
 }
 
 .page-header {
@@ -93,8 +95,6 @@ defineProps({
     left: 1rem;
     right: 1rem;
     width: auto;
-    max-height: 80vh;
-    overflow: auto;
     z-index: 100000;
   }
 }
