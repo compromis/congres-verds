@@ -25,6 +25,7 @@ import CompromisLogo from '@compromis/blobby/components/logos/CompromisLogo.vue'
   top: 0;
   left: 0;
   right: 0;
+  z-index: 50;
 
   .logo-verds {
     img {

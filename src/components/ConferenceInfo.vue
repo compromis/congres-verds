@@ -29,6 +29,7 @@ import 'vue3-marquee/dist/style.css'
   font-size: 2.25rem;
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: bold;
+  z-index: 1000;
 }
 
 .scroll {

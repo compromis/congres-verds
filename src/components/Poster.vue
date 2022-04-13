@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted } from 'vue'
+import PosterPages from './PosterPages.vue'
 import Parallax from 'parallax-js'
 
 onMounted(() => {
@@ -38,6 +39,7 @@ onMounted(() => {
           <a href="#info">Informació</a>
         </div>
       </div>
+      <PosterPages />
   </section>
 </template>
 
@@ -140,7 +142,7 @@ onMounted(() => {
   @media (max-width: 1100px) {
     .poster {
       min-height: auto;
-      padding: 1rem 0;
+      padding: 3rem 0;
 
       .nav-item {
         &.candidates a {
