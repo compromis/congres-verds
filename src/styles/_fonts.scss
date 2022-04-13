@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'Colby';
   src: local('Colby Black'), local('Colby-StBlk'),
-      url('../fonts/Colby-StBlk.woff2') format('woff2'),
-      url('../fonts/Colby-StBlk.woff') format('woff'),
-      url('../fonts/Colby-StBlk.ttf') format('truetype');
+      url('/assets/fonts/Colby-StBlk.woff2') format('woff2'),
+      url('/assets/fonts/Colby-StBlk.woff') format('woff'),
+      url('/assets/fonts/Colby-StBlk.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
