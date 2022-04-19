@@ -51,10 +51,16 @@ const closePage = () => {
         <div class="nav-item floats info d-none d-md-block" data-depth="0.6" style="z-index: 10000">
           <a href="#info" @click.prevent="setPage('info')">Informació</a>
         </div>
+        <div class="nav-item floats form d-none d-md-block" data-depth="0.5" style="z-index: 10000">
+          <a href="#form" @click.prevent="setPage('form')">Registre</a>
+        </div>
       </div>
       <div class="mobile-nav-items d-md-none">
         <div class="nav-item candidates">
           <a href="#candidatures" @click.prevent="setPage('candidatures')">Candidatures</a>
+        </div>
+        <div class="nav-item info">
+          <a href="#form" @click.prevent="setPage('form')">Registre</a>
         </div>
         <div class="nav-item documents">
           <a href="#documents" @click.prevent="setPage('documents')">Documents</a>
@@ -113,7 +119,12 @@ const closePage = () => {
 
       &.info a {
         bottom: -1%;
-        right: 27%;
+        right: 10%;
+      }
+
+      &.form a {
+        bottom: 2%;
+        left: 1%;
       }
     }
   }

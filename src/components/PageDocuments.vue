@@ -1,5 +1,6 @@
 <script setup>
 import DocumentIcon from './DocumentIcon.vue'
+import FormIcon from './FormIcon.vue'
 </script>
 
 <template>
@@ -20,6 +21,12 @@ import DocumentIcon from './DocumentIcon.vue'
       <a href="https://valencia.discuss.green/valencia/reglament-del-iiier-congres-de-verds-equo-del-pais-valencia-7-de-maig-4838" target="_blank">
         <DocumentIcon />
         Reglament congressual
+      </a>
+    </li>
+    <li>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdfxCdC62BLflHN-1O-jYkB0RZlhZ-DCujKcRo2YK7XQWLSqw/viewform" target="_blank">
+        <FormIcon />
+        Formulari de delegació de vot
       </a>
     </li>
   </ul>
