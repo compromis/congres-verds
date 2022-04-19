@@ -52,7 +52,7 @@ const closePage = () => {
           <a href="#info" @click.prevent="setPage('info')">Informació</a>
         </div>
         <div class="nav-item floats form d-none d-md-block" data-depth="0.5" style="z-index: 10000">
-          <a href="#form" @click.prevent="setPage('form')">Registre</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSel99LGY-hVoiVD9jQ_yel-TpkEln0AZ6PHH2ZBfUhSNtx3WA/viewform" target="_blank" rel="noopener">Registre</a>
         </div>
       </div>
       <div class="mobile-nav-items d-md-none">
@@ -60,7 +60,7 @@ const closePage = () => {
           <a href="#candidatures" @click.prevent="setPage('candidatures')">Candidatures</a>
         </div>
         <div class="nav-item info">
-          <a href="#form" @click.prevent="setPage('form')">Registre</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSel99LGY-hVoiVD9jQ_yel-TpkEln0AZ6PHH2ZBfUhSNtx3WA/viewform" target="_blank" rel="noopener">Registre</a>
         </div>
         <div class="nav-item documents">
           <a href="#documents" @click.prevent="setPage('documents')">Documents</a>

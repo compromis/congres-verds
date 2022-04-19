@@ -29,6 +29,12 @@ import FormIcon from './FormIcon.vue'
         Formulari de delegació de vot
       </a>
     </li>
+    <li>
+      <a href="/docs/instruccions-esmenes.pdf" target="_blank">
+        <DocumentIcon />
+        Instruccions presentació d'esmenes
+      </a>
+    </li>
   </ul>
 </template>
 
