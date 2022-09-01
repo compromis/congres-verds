@@ -12,7 +12,7 @@ import FormIcon from './FormIcon.vue'
       </a>
     </li>
     <li>
-      <a href="https://valencia.discuss.green/valencia/las-propuestas-verdes-a-los-retos-de-la-ciudadania-valenciana-para-el-482" target="_blank">
+      <a href="https://verds.compromis.net/files/2022/08/Ponencia-Politica-2022-VAL.pdf" target="_blank">
         <DocumentIcon />
         Ponència Política
       </a>
