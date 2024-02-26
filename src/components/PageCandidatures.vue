@@ -4,7 +4,7 @@ import DocumentIcon from './DocumentIcon.vue'
 
 <template>
   <p>El termini de presentació de candidatures encara està obert.</p>
-  <p>Termini de presentació: <strong>1 de maig</strong>.</p>
+  <p>Termini de presentació: <strong>1 de maig 2022</strong>.</p>
   <h3>Candidatures presentades</h3>
   <ul class="docs">
     <li>
